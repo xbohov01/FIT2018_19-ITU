@@ -68,4 +68,15 @@ public class RandomTestActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.points);
         textView.setText(pointsText);
     }
+
+    public void endTest(View view){
+        stopTimer();
+        finish();
+    }
+
+    @Override
+    public void onBackPressed(){
+        stopTimer();
+        finish();
+    }
 }

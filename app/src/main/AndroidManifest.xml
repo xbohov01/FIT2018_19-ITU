@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RandomTestActivity"></activity>
+        <activity android:name=".RandomTestActivity" />
+        <activity android:name=".TestSelection" />
+        <activity android:name=".MyResults" />
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>

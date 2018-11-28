@@ -23,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
         //Add additional data if needed
         startActivity(intent);
     }
+
+    public void testSelectButton(View view){
+        
+    }
 }
