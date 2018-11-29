@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -27,15 +29,28 @@ public class RandomTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_test);
 
+        //back and next
         Button button1 = (Button)findViewById(R.id.button);
         button1.setVisibility(View.GONE);
 
         Button button2 = (Button)findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
 
+        //question
         TextView question = (TextView)findViewById(R.id.question_text);
         question.setText(test.GetQuestion(quest_num));
         question.setVisibility(View.GONE);
+
+        //radio button
+        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
+        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+
+        buttona.setVisibility(View.GONE);
+        buttonb.setVisibility(View.GONE);
+        buttonc.setVisibility(View.GONE);
+
+
 
     }
 
@@ -58,6 +73,15 @@ public class RandomTestActivity extends AppCompatActivity {
             Button button_next = (Button)findViewById(R.id.button2);
             button_next.setVisibility(View.VISIBLE);
         }
+        //radio button
+        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+        buttona.setText(test.GetAnswerA(quest_num));
+
+        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
+        buttonb.setText(test.GetAnswerB(quest_num));
+
+        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+        buttonc.setText(test.GetAnswerC(quest_num));
     }
 
     public void previousQuestion(View view){
@@ -80,6 +104,15 @@ public class RandomTestActivity extends AppCompatActivity {
             Button button_next = (Button)findViewById(R.id.button);
             button_next.setVisibility(View.VISIBLE);
         }
+        //radio button
+        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+        buttona.setText(test.GetAnswerA(quest_num));
+
+        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
+        buttonb.setText(test.GetAnswerB(quest_num));
+
+        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+        buttonc.setText(test.GetAnswerC(quest_num));
     }
 
     public void startTimer(View view){
@@ -110,6 +143,20 @@ public class RandomTestActivity extends AppCompatActivity {
 
         TextView question = (TextView)findViewById(R.id.question_text);
         question.setVisibility(View.VISIBLE);
+
+        //radio button
+        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+        buttona.setText(test.GetAnswerA(quest_num));
+        buttona.setVisibility(View.VISIBLE);
+
+        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
+        buttonb.setText(test.GetAnswerB(quest_num));
+        buttonb.setVisibility(View.VISIBLE);
+
+        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+        buttonc.setText(test.GetAnswerB(quest_num));
+        buttonc.setVisibility(View.VISIBLE);
+
     }
 
     public void stopTimer(){
