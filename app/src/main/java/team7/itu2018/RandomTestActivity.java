@@ -35,7 +35,7 @@ public class RandomTestActivity extends AppCompatActivity {
     public void nextQuestion(View view){
         TextView textView = (TextView)findViewById(R.id.question);
         questionOrder++;
-        String text = "Otázka "+questionOrder+"/25";
+        String text = "Otázka "+questionOrder+"/27";
         textView.setText(text);
     }
 
