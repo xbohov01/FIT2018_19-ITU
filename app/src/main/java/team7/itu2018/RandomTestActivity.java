@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -23,12 +24,18 @@ public class RandomTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_test);
+
+        Button button1 = (Button)findViewById(R.id.button);
+        button1.setVisibility(View.GONE);
+
+        Button button2 = (Button)findViewById(R.id.button2);
+        button2.setVisibility(View.GONE);
     }
 
     public void nextQuestion(View view){
         TextView textView = (TextView)findViewById(R.id.question);
         questionOrder++;
-        String text = "Otázka "+questionOrder+"/25";
+        String text = "Otázka "+questionOrder+"/27";
         textView.setText(text);
     }
 
@@ -41,7 +48,6 @@ public class RandomTestActivity extends AppCompatActivity {
 
     public void startTimer(View view){
         timer = new Timer();
-
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
@@ -56,6 +62,15 @@ public class RandomTestActivity extends AppCompatActivity {
                 textView.setText(text);
             }
         }, 0, 1000);
+
+         Button button3 = (Button)findViewById(R.id.button3);
+         button3.setVisibility(View.GONE);
+
+        Button button1 = (Button)findViewById(R.id.button);
+        button1.setVisibility(View.VISIBLE);
+
+        Button button2 = (Button)findViewById(R.id.button2);
+        button2.setVisibility(View.VISIBLE);
     }
 
     public void stopTimer(){
