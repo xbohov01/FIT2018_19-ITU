@@ -60,26 +60,26 @@
         android:id="@+id/select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="42dp"
         android:onClick="testSelectButton"
         app:layout_constraintBottom_toTopOf="@+id/achievements"
         app:layout_constraintEnd_toStartOf="@+id/endless"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainMenuToolbar"
-        app:srcCompat="@drawable/select_test" />
+        app:srcCompat="@drawable/vyber_testov" />
 
     <ImageButton
         android:id="@+id/endless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="42dp"
         android:onClick="endlessTestButton"
         app:layout_constraintBottom_toTopOf="@+id/random"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/select"
         app:layout_constraintTop_toBottomOf="@+id/mainMenuToolbar"
-        app:srcCompat="@drawable/endless_test" />
+        app:srcCompat="@drawable/nekonecny_test" />
 
     <ImageButton
         android:id="@+id/random"
@@ -87,11 +87,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:onClick="randomTestButton"
-        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintBottom_toTopOf="@+id/results"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/achievements"
         app:layout_constraintTop_toBottomOf="@+id/endless"
-        app:srcCompat="@drawable/random_test" />
+        app:srcCompat="@drawable/nahodny_test" />
 
     <ImageButton
         android:id="@+id/achievements"
@@ -103,31 +103,31 @@
         app:layout_constraintEnd_toStartOf="@+id/random"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select"
-        app:srcCompat="@drawable/achievements" />
+        app:srcCompat="@drawable/moje_uspechy" />
 
     <ImageButton
         android:id="@+id/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:onClick="settingsButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/results"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/achievements"
-        app:srcCompat="@drawable/settings" />
+        app:srcCompat="@drawable/nastavenia" />
 
     <ImageButton
         android:id="@+id/results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:onClick="myResultsButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/settings"
         app:layout_constraintTop_toBottomOf="@+id/random"
-        app:srcCompat="@drawable/results" />
+        app:srcCompat="@drawable/moje_vysledky" />
 
 
 </android.support.constraint.ConstraintLayout>
