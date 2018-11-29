@@ -19,7 +19,8 @@
         <activity android:name=".RandomTestActivity" />
         <activity android:name=".TestSelection" />
         <activity android:name=".MyResults" />
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".EndlessTest"></activity>
     </application>
 
 </manifest>

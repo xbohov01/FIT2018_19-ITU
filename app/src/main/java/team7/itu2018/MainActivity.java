@@ -25,6 +25,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void testSelectButton(View view){
-        
+        Intent intent = new Intent(this, TestSelection.class);
+        startActivity(intent);
+    }
+
+    public void endlessTestButton(View view){
+        //Intent intent = new Intent(this, MyResults.class);
+        //startActivity(intent);
+    }
+
+    public void achievementsButton(View view){
+        //Intent intent = new Intent(this, MyResults.class);
+        //startActivity(intent);
+    }
+
+    public void settingsButton(View view){
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
+
+    public void myResultsButton(View view){
+        Intent intent = new Intent(this, MyResults.class);
+        startActivity(intent);
     }
 }
