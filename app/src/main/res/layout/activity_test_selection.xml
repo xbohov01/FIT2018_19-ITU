@@ -33,7 +33,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/text_white"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/points"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
