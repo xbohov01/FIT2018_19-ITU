@@ -19,6 +19,8 @@ public class RandomTestActivity extends AppCompatActivity {
     int seconds = 60;
     int minutes = 19;
     Timer timer;
+    int quest_num = 0;
+    Test_database test = new Test_database();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,11 @@ public class RandomTestActivity extends AppCompatActivity {
 
         Button button2 = (Button)findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
+
+        TextView question = (TextView)findViewById(R.id.question_text);
+        question.setText(test.GetQuestion(quest_num));
+        question.setVisibility(View.GONE);
+
     }
 
     public void nextQuestion(View view){
@@ -37,6 +44,20 @@ public class RandomTestActivity extends AppCompatActivity {
         questionOrder++;
         String text = "Otázka "+questionOrder+"/27";
         textView.setText(text);
+
+        quest_num++;
+        TextView question = (TextView)findViewById(R.id.question_text);
+        question.setText(test.GetQuestion(quest_num));
+        question.setVisibility(View.VISIBLE);
+
+        if(quest_num == 26){
+            Button button_next = (Button)findViewById(R.id.button);
+            button_next.setVisibility(View.GONE);
+        }
+        else{
+            Button button_next = (Button)findViewById(R.id.button2);
+            button_next.setVisibility(View.VISIBLE);
+        }
     }
 
     public void previousQuestion(View view){
@@ -44,6 +65,21 @@ public class RandomTestActivity extends AppCompatActivity {
         questionOrder--;
         String text = "Otázka "+questionOrder+"/25";
         textView.setText(text);
+
+        quest_num--;
+        TextView question = (TextView)findViewById(R.id.question_text);
+        question.setText(test.GetQuestion(quest_num));
+        question.setVisibility(View.VISIBLE);
+
+
+        if(quest_num == 0){
+            Button button_next = (Button)findViewById(R.id.button2);
+            button_next.setVisibility(View.GONE);
+        }
+        else{
+            Button button_next = (Button)findViewById(R.id.button);
+            button_next.setVisibility(View.VISIBLE);
+        }
     }
 
     public void startTimer(View view){
@@ -54,10 +90,10 @@ public class RandomTestActivity extends AppCompatActivity {
                 //Update timer
                 seconds--;
                 if (seconds == 0){
-                    seconds = 60;
+                    seconds = 59;
                     minutes--;
                 }
-                String text = String.valueOf(minutes)+":"+String.valueOf(seconds);
+                String text = String.format("%02d:%02d",minutes,seconds);
                 TextView textView = (TextView) findViewById(R.id.timer);
                 textView.setText(text);
             }
@@ -71,6 +107,9 @@ public class RandomTestActivity extends AppCompatActivity {
 
         Button button2 = (Button)findViewById(R.id.button2);
         button2.setVisibility(View.VISIBLE);
+
+        TextView question = (TextView)findViewById(R.id.question_text);
+        question.setVisibility(View.VISIBLE);
     }
 
     public void stopTimer(){

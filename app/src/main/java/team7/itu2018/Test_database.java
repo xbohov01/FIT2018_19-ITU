@@ -1,9 +1,9 @@
 package team7.itu2018;
 
 public class Test_database {
-
+    Questions[] quest = new Questions[30];
    public Test_database(){
-       Questions[] quest = new Questions[30];
+
        quest[0] = new Questions("Dať prednosť v jazde sa rozumie",
                "povinnosť účastníka cestnej premávky počínať si tak, aby ten, kto má prednosť v jazde, nemusel náhle zmeniť smer alebo rýchlosť jazdy",
                "povinnosť účastníka cestnej premávky počínať si tak, aby ten, kto má prednosť v jazde, nemusel zmeniť smer jazdy, môže však zmeniť rýchlosť jazdy,",
@@ -167,6 +167,29 @@ public class Test_database {
                1);
 
    }
+
+   public String GetQuestion(int QNumber){
+       return quest[QNumber].getQuestion();
+   }
+
+   public String GetAnswerA(int QNumber){
+       return quest[QNumber].getAnswerA();
+   }
+
+   public String GetAnswerB(int QNumber){
+       return quest[QNumber].getAnswerB();
+   }
+
+   public String GetAnswerC(int QNumber){
+       return quest[QNumber].getAnswerC();
+   }
+
+    public int GetRightAnswer(int QNumber){
+        return quest[QNumber].getRightAnswer();
+    }
+
+
+
 
 
 
