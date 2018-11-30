@@ -63,10 +63,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -74,6 +70,174 @@
                 android:drawableRight="@android:drawable/ic_media_play"
                 android:textSize="24sp"
                 tools:text="Test č. 1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 9" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 11" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 12" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 13" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 17" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 19" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 21" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 22" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 23" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_media_play"
+                android:textSize="24sp"
+                tools:text="Test č. 25" />
 
         </LinearLayout>
     </ScrollView>
