@@ -24,7 +24,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/question"
+                android:id="@+id/name_vys"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
                 android:textColor="@color/text_toolbar_dark"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/question"
+                app:layout_constraintEnd_toStartOf="@+id/name_vys"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +72,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.919"
-                app:layout_constraintStart_toEndOf="@+id/question"
+                app:layout_constraintStart_toEndOf="@+id/name_vys"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@android:drawable/ic_delete" />
@@ -189,5 +189,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_text"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/but_koniec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="viewResults"
+        android:text="Koniec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
 
 </android.support.constraint.ConstraintLayout>

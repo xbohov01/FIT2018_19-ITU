@@ -1,17 +1,12 @@
 package team7.itu2018;
 
-import android.os.CountDownTimer;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.Arrays;
 import java.util.Timer;
@@ -54,13 +49,12 @@ public class RandomTestActivity extends AppCompatActivity {
         buttonb.setVisibility(View.GONE);
         buttonc.setVisibility(View.GONE);
 
-
-
-
+        Button button4 = (Button)findViewById(R.id.but_koniec);
+        button4.setVisibility(View.GONE);
     }
 
     public void nextQuestion(View view){
-        TextView textView = (TextView)findViewById(R.id.question);
+        TextView textView = (TextView)findViewById(R.id.name_vys);
         RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
         RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
@@ -99,10 +93,14 @@ public class RandomTestActivity extends AppCompatActivity {
         if(quest_num == 26){
             Button button_next = (Button)findViewById(R.id.button);
             button_next.setVisibility(View.GONE);
+            Button button4 = (Button)findViewById(R.id.but_koniec);
+            button4.setVisibility(View.VISIBLE);
         }
         else{
             Button button_next = (Button)findViewById(R.id.button2);
             button_next.setVisibility(View.VISIBLE);
+            Button button4 = (Button)findViewById(R.id.but_koniec);
+            button4.setVisibility(View.GONE);
         }
         //radio button
         buttona.setText(test.GetAnswerA(quest_num));
@@ -132,7 +130,7 @@ public class RandomTestActivity extends AppCompatActivity {
     }
 
     public void previousQuestion(View view){
-        TextView textView = (TextView)findViewById(R.id.question);
+        TextView textView = (TextView)findViewById(R.id.name_vys);
         RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
         RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
@@ -152,7 +150,7 @@ public class RandomTestActivity extends AppCompatActivity {
         }
 
         questionOrder--;
-        String text = "Otázka "+questionOrder+"/25";
+        String text = "Otázka "+questionOrder+"/27";
         textView.setText(text);
 
         quest_num--;
@@ -176,6 +174,8 @@ public class RandomTestActivity extends AppCompatActivity {
         else{
             Button button_next = (Button)findViewById(R.id.button);
             button_next.setVisibility(View.VISIBLE);
+            Button button4 = (Button)findViewById(R.id.but_koniec);
+            button4.setVisibility(View.GONE);
         }
         //radio button
         buttona.setText(test.GetAnswerA(quest_num));
@@ -259,6 +259,11 @@ public class RandomTestActivity extends AppCompatActivity {
 
 
     public void endTest(View view){
+        //stopTimer();
+        finish();
+    }
+
+    public void viewResults(View view){
         //stopTimer();
         finish();
     }
