@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,6 +24,7 @@ public class RandomTestActivity extends AppCompatActivity {
     Timer timer;
     int quest_num = 0;
     Test_database test = new Test_database();
+    int[] answers = new int[27];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class RandomTestActivity extends AppCompatActivity {
         Button button2 = (Button)findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
 
+        Arrays.fill(answers,0);
         //question
         TextView question = (TextView)findViewById(R.id.question_text);
         question.setText(test.GetQuestion(quest_num));
@@ -52,10 +55,28 @@ public class RandomTestActivity extends AppCompatActivity {
 
 
 
+
     }
 
     public void nextQuestion(View view){
         TextView textView = (TextView)findViewById(R.id.question);
+        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
+        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+
+        if(buttona.isChecked()){
+            answers[quest_num] = 1;
+        }
+        else if(buttonb.isChecked()){
+            answers[quest_num] = 2;
+        }
+        else if(buttonc.isChecked()){
+            answers[quest_num] = 3;
+        }
+        else {
+            answers[quest_num] = 0;
+        }
+
         questionOrder++;
         String text = "Otázka "+questionOrder+"/27";
         textView.setText(text);
@@ -74,18 +95,50 @@ public class RandomTestActivity extends AppCompatActivity {
             button_next.setVisibility(View.VISIBLE);
         }
         //radio button
-        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
         buttona.setText(test.GetAnswerA(quest_num));
-
-        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         buttonb.setText(test.GetAnswerB(quest_num));
-
-        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
         buttonc.setText(test.GetAnswerC(quest_num));
+
+        if(answers[quest_num] == 0){
+            buttona.setChecked(false);
+            buttonb.setChecked(false);
+            buttonc.setChecked(false);
+        }
+        else if(answers[quest_num] ==1){
+            buttona.setChecked(true);
+            buttonb.setChecked(false);
+            buttonc.setChecked(false);
+        }
+        else if(answers[quest_num] ==2){
+            buttona.setChecked(false);
+            buttonb.setChecked(true);
+            buttonc.setChecked(false);
+        }
+        else if(answers[quest_num] ==3){
+            buttona.setChecked(false);
+            buttonb.setChecked(false);
+            buttonc.setChecked(true);
+        }
     }
 
     public void previousQuestion(View view){
         TextView textView = (TextView)findViewById(R.id.question);
+        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
+        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+        if(buttona.isChecked()){
+            answers[quest_num] = 1;
+        }
+        else if(buttonb.isChecked()){
+            answers[quest_num] = 2;
+        }
+        else if(buttonc.isChecked()){
+            answers[quest_num] = 3;
+        }
+        else {
+            answers[quest_num] = 0;
+        }
+
         questionOrder--;
         String text = "Otázka "+questionOrder+"/25";
         textView.setText(text);
@@ -105,14 +158,30 @@ public class RandomTestActivity extends AppCompatActivity {
             button_next.setVisibility(View.VISIBLE);
         }
         //radio button
-        RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
         buttona.setText(test.GetAnswerA(quest_num));
-
-        RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         buttonb.setText(test.GetAnswerB(quest_num));
-
-        RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
         buttonc.setText(test.GetAnswerC(quest_num));
+
+        if(answers[quest_num] == 0){
+            buttona.setChecked(false);
+            buttonb.setChecked(false);
+            buttonc.setChecked(false);
+        }
+        else if(answers[quest_num] ==1){
+            buttona.setChecked(true);
+            buttonb.setChecked(false);
+            buttonc.setChecked(false);
+        }
+        else if(answers[quest_num] ==2){
+            buttona.setChecked(false);
+            buttonb.setChecked(true);
+            buttonc.setChecked(false);
+        }
+        else if(answers[quest_num] ==3){
+            buttona.setChecked(false);
+            buttonb.setChecked(false);
+            buttonc.setChecked(true);
+        }
     }
 
     public void startTimer(View view){
@@ -139,7 +208,7 @@ public class RandomTestActivity extends AppCompatActivity {
         button1.setVisibility(View.VISIBLE);
 
         Button button2 = (Button)findViewById(R.id.button2);
-        button2.setVisibility(View.VISIBLE);
+        button2.setVisibility(View.GONE);
 
         TextView question = (TextView)findViewById(R.id.question_text);
         question.setVisibility(View.VISIBLE);
