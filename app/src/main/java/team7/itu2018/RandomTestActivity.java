@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -63,6 +64,7 @@ public class RandomTestActivity extends AppCompatActivity {
         RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
         RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
+        ImageView image_test = (ImageView)findViewById(R.id.image_test);
 
         if(buttona.isChecked()){
             answers[quest_num] = 1;
@@ -85,6 +87,14 @@ public class RandomTestActivity extends AppCompatActivity {
         TextView question = (TextView)findViewById(R.id.question_text);
         question.setText(test.GetQuestion(quest_num));
         question.setVisibility(View.VISIBLE);
+        if(test.GetPicture(quest_num).equals("")){
+            image_test.setVisibility(View.GONE);
+        }
+        else{
+            int resId = getResources().getIdentifier(test.GetPicture(quest_num), "drawable", getPackageName());
+            image_test.setImageResource(resId);
+            image_test.setVisibility(View.VISIBLE);
+        }
 
         if(quest_num == 26){
             Button button_next = (Button)findViewById(R.id.button);
@@ -126,6 +136,8 @@ public class RandomTestActivity extends AppCompatActivity {
         RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
         RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
+        ImageView image_test = (ImageView)findViewById(R.id.image_test);
+
         if(buttona.isChecked()){
             answers[quest_num] = 1;
         }
@@ -148,6 +160,14 @@ public class RandomTestActivity extends AppCompatActivity {
         question.setText(test.GetQuestion(quest_num));
         question.setVisibility(View.VISIBLE);
 
+        if(test.GetPicture(quest_num).equals("")){
+            image_test.setVisibility(View.GONE);
+        }
+        else{
+            int resId = getResources().getIdentifier(test.GetPicture(quest_num), "drawable", getPackageName());
+            image_test.setImageResource(resId);
+            image_test.setVisibility(View.VISIBLE);
+        }
 
         if(quest_num == 0){
             Button button_next = (Button)findViewById(R.id.button2);
@@ -201,8 +221,11 @@ public class RandomTestActivity extends AppCompatActivity {
             }
         }, 0, 1000);
 
-         Button button3 = (Button)findViewById(R.id.button3);
-         button3.setVisibility(View.GONE);
+        ImageView image_test = (ImageView)findViewById(R.id.image_test);
+        image_test.setVisibility(View.GONE);
+
+        Button button3 = (Button)findViewById(R.id.button3);
+        button3.setVisibility(View.GONE);
 
         Button button1 = (Button)findViewById(R.id.button);
         button1.setVisibility(View.VISIBLE);

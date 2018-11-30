@@ -147,13 +147,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_text"
-        app:layout_constraintVertical_bias="0.72">
+        app:layout_constraintTop_toBottomOf="@+id/image_test"
+        app:layout_constraintVertical_bias="0.04000002">
 
         <RadioButton
             android:id="@+id/buttona"
@@ -176,5 +176,18 @@
             android:layout_weight="1"
             android:text="RadioButton" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/image_test"
+        android:layout_width="363dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_text"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </android.support.constraint.ConstraintLayout>

@@ -11,13 +11,15 @@ public class Questions {
     private int RightAnswer;
 
     //constructor
-    public Questions(String Question,String AnswerA,String AnswerB,String AnswerC,int RightAnswer,int Points){
+    public Questions(String Question,String AnswerA,String AnswerB,String AnswerC,int RightAnswer,int Points, int Type, String Picture){
         this.Question = Question;
         this.AnswerA = AnswerA;
         this.AnswerB = AnswerB;
         this.AnswerC = AnswerC;
         this.RightAnswer = RightAnswer;
         this.Points = Points;
+        this.Type = Type;
+        this.Picture = Picture;
     }
 
     //getter
@@ -26,4 +28,7 @@ public class Questions {
     public String getAnswerB(){return AnswerB;}
     public String getAnswerC(){return AnswerC;}
     public int getRightAnswer(){return RightAnswer;}
+    public int getQType(){return Type;}
+    public int getPoints(){return Points;}
+    public String getPicture(){return Picture; }
 }
