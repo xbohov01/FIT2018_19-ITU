@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -110,8 +109,9 @@ public class RandomTestActivity extends AppCompatActivity {
         buttonc.setText(test.GetAnswerC(quest_num));
 
         if(answers[quest_num] == 0){
-            RadioGroup radiogroup = (RadioGroup)findViewById(R.id.but_group);
-            radiogroup.clearCheck();
+            buttona.setChecked(false);
+            buttonb.setChecked(false);
+            buttonc.setChecked(false);
         }
         else if(answers[quest_num] ==1){
             buttona.setChecked(true);
@@ -184,8 +184,9 @@ public class RandomTestActivity extends AppCompatActivity {
         buttonc.setText(test.GetAnswerC(quest_num));
 
         if(answers[quest_num] == 0){
-            RadioGroup radiogroup = (RadioGroup)findViewById(R.id.but_group);
-            radiogroup.clearCheck();
+            buttona.setChecked(false);
+            buttonb.setChecked(false);
+            buttonc.setChecked(false);
         }
         else if(answers[quest_num] ==1){
             buttona.setChecked(true);
@@ -266,6 +267,7 @@ public class RandomTestActivity extends AppCompatActivity {
     public void viewResults(View view){
         //stopTimer();
         Intent intent = new Intent(this, TestResultsActivity.class);
+        intent.putExtra("answers",answers);
         startActivity(intent);
     }
 

@@ -19,10 +19,29 @@ import java.util.TimerTask;
 
 public class TestResultsActivity extends AppCompatActivity {
 
+    int[] answers = new int[27];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_results);
+        setContentView(R.layout.activity_test_results);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            answers = extras.getIntArray("answers");
+        }
+
+
+
+    }
+
+    public void ShowAnswers(View view){
+        finish();
+    }
+
+    public void endTest(View view){
+        //stopTimer();
+        finish();
     }
 
 }
