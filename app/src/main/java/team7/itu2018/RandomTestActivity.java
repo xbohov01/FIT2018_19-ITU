@@ -1,5 +1,6 @@
 package team7.itu2018;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -265,7 +266,8 @@ public class RandomTestActivity extends AppCompatActivity {
 
     public void viewResults(View view){
         //stopTimer();
-        finish();
+        Intent intent = new Intent(this, TestResultsActivity.class);
+        startActivity(intent);
     }
 
     @Override
