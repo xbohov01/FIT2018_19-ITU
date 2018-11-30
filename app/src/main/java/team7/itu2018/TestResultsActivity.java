@@ -24,4 +24,5 @@ public class TestResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_results);
     }
+
 }
