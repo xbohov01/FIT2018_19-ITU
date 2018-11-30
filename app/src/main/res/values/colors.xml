@@ -6,4 +6,5 @@
     <color name="text_toolbar_dark">#84528a</color>
     <color name="text_white">#ffffff</color>
     <color name="colorGreen">#92d7ba</color>
+    <color name="text_dark">#000000</color>
 </resources>

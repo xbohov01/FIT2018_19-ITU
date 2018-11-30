@@ -165,19 +165,15 @@ public class RandomTestActivity extends AppCompatActivity {
         minutes = 20;
     }
 
-    public void setPoints (View view, String pointsText){
-        TextView textView = (TextView) findViewById(R.id.points);
-        textView.setText(pointsText);
-    }
 
     public void endTest(View view){
-        stopTimer();
+        //stopTimer();
         finish();
     }
 
     @Override
     public void onBackPressed(){
-        stopTimer();
+        //stopTimer();
         finish();
     }
 }
