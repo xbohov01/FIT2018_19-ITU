@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -39,10 +40,10 @@ public class RandomTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_random_test);
 
         //back and next
-        Button button1 = (Button)findViewById(R.id.button);
+        ImageButton button1 = (ImageButton)findViewById(R.id.button);
         button1.setVisibility(View.GONE);
 
-        Button button2 = (Button)findViewById(R.id.button2);
+        ImageButton button2 = (ImageButton) findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
 
         Arrays.fill(answers,0);
@@ -60,7 +61,7 @@ public class RandomTestActivity extends AppCompatActivity {
         buttonb.setVisibility(View.GONE);
         buttonc.setVisibility(View.GONE);
 
-        Button button4 = (Button)findViewById(R.id.but_koniec);
+        ImageButton button4 = (ImageButton)findViewById(R.id.but_koniec);
         button4.setVisibility(View.GONE);
     }
 
@@ -102,15 +103,15 @@ public class RandomTestActivity extends AppCompatActivity {
         }
 
         if(quest_num == 26){
-            Button button_next = (Button)findViewById(R.id.button);
+            ImageButton button_next = (ImageButton) findViewById(R.id.button);
             button_next.setVisibility(View.GONE);
-            Button button4 = (Button)findViewById(R.id.but_koniec);
+            ImageButton button4 = (ImageButton) findViewById(R.id.but_koniec);
             button4.setVisibility(View.VISIBLE);
         }
         else{
-            Button button_next = (Button)findViewById(R.id.button2);
+            ImageButton button_next = (ImageButton) findViewById(R.id.button2);
             button_next.setVisibility(View.VISIBLE);
-            Button button4 = (Button)findViewById(R.id.but_koniec);
+            ImageButton button4 = (ImageButton) findViewById(R.id.but_koniec);
             button4.setVisibility(View.GONE);
         }
         //radio button
@@ -179,13 +180,13 @@ public class RandomTestActivity extends AppCompatActivity {
         }
 
         if(quest_num == 0){
-            Button button_next = (Button)findViewById(R.id.button2);
+            ImageButton button_next = (ImageButton) findViewById(R.id.button2);
             button_next.setVisibility(View.GONE);
         }
         else{
-            Button button_next = (Button)findViewById(R.id.button);
+            ImageButton button_next = (ImageButton) findViewById(R.id.button);
             button_next.setVisibility(View.VISIBLE);
-            Button button4 = (Button)findViewById(R.id.but_koniec);
+            ImageButton button4 = (ImageButton) findViewById(R.id.but_koniec);
             button4.setVisibility(View.GONE);
         }
         //radio button
@@ -235,13 +236,13 @@ public class RandomTestActivity extends AppCompatActivity {
         ImageView image_test = (ImageView)findViewById(R.id.image_test);
         image_test.setVisibility(View.GONE);
 
-        Button button3 = (Button)findViewById(R.id.button3);
+        ImageButton button3 = (ImageButton) findViewById(R.id.button3);
         button3.setVisibility(View.GONE);
 
-        Button button1 = (Button)findViewById(R.id.button);
+        ImageButton button1 = (ImageButton) findViewById(R.id.button);
         button1.setVisibility(View.VISIBLE);
 
-        Button button2 = (Button)findViewById(R.id.button2);
+        ImageButton button2 = (ImageButton) findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
 
         TextView question = (TextView)findViewById(R.id.question_text);
