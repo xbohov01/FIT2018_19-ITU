@@ -21,7 +21,7 @@ public class EndlessTest extends AppCompatActivity {
     boolean Qkriz =false;
     Test_database test = new Test_database();
     int quest_num = 0;
-    int questionOrder = 0;
+    int questionOrder = 1;
     int color;
     int body = 0;
     int answer = 0;
@@ -49,16 +49,16 @@ public class EndlessTest extends AppCompatActivity {
             if(quest_num >= 27) {
                 quest_num = 0;
             }
-            if((Qtext == true)) {
+            if(Qtext && (test.GetQType(quest_num)==1)) {
                 tmp = false;
             }
-            else if((Qtech == true)) {
+            else if(Qtech && (test.GetQType(quest_num)==2)) {
                 tmp = false;
             }
-            else if((Qznac == true)) {
+            else if(Qznac && (test.GetQType(quest_num)==3)) {
                 tmp = false;
             }
-            else if((Qkriz == true) ) {
+            else if(Qkriz && (test.GetQType(quest_num)==4)) {
                 tmp = false;
             }
             quest_num++;
@@ -146,7 +146,7 @@ public class EndlessTest extends AppCompatActivity {
         questionOrder++;
 
         TextView otazka = (TextView)findViewById(R.id.name_vys);
-        String text = "Otázka "+questionOrder + "Body " + body;
+        String text = "Otázka "+questionOrder + " Body " + body;
         otazka.setText(text);
 
         ImageButton button1 = (ImageButton)findViewById(R.id.button);

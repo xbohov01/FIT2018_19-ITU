@@ -36,6 +36,23 @@ public class EndlessTestStart extends AppCompatActivity {
     }
 
     public void StartTest(View view){
+        CheckBox chtext = (CheckBox)findViewById(R.id.checkBox);
+        CheckBox chtech = (CheckBox)findViewById(R.id.checkBox2);
+        CheckBox chznac = (CheckBox)findViewById(R.id.checkBox3);
+        CheckBox chkriz = (CheckBox)findViewById(R.id.checkBox4);
+
+        if(chtext.isChecked()){
+            Qtext = true;
+        }
+        if(chtech.isChecked()){
+            Qtech =true;
+        }
+        if(chznac.isChecked()){
+            Qznac =true;
+        }
+        if(chkriz.isChecked()){
+            Qkriz =true;
+        }
 
 
 
