@@ -19,11 +19,11 @@
         <activity android:name=".RandomTestActivity" />
         <activity android:name=".TestSelection" />
         <activity android:name=".MyResults" />
-        <activity android:name=".TestResultsActivity"/>
-        <activity android:name=".EndlessTestStart"/>
+        <activity android:name=".TestResultsActivity" />
+        <activity android:name=".EndlessTestStart" />
         <activity android:name=".Settings" />
-        <activity android:name=".EndlessTest">
-        </activity>
+        <activity android:name=".EndlessTest"></activity>
+        <activity android:name=".AchievementsActivity"></activity>
     </application>
 
 </manifest>

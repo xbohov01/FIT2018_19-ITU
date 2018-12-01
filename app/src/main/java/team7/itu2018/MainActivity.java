@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void endlessTestButton(View view){
-        //Intent intent = new Intent(this, MyResults.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, EndlessTestStart.class);
+        startActivity(intent);
     }
 
     public void achievementsButton(View view){
-        //Intent intent = new Intent(this, MyResults.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, AchievementsActivity.class);
+        startActivity(intent);
     }
 
     public void settingsButton(View view){
