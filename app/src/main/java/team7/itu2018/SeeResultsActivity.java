@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -36,7 +37,7 @@ public class SeeResultsActivity extends AppCompatActivity {
         }
         //back and next
 
-        Button button2 = (Button)findViewById(R.id.button2);
+        ImageButton button2 = (ImageButton)findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
         for(int i=0; i<27;i++){
             if(test.GetRightAnswer(i) != answers[i]){
@@ -59,7 +60,7 @@ public class SeeResultsActivity extends AppCompatActivity {
         }
 
         if(quest_num == posledna){
-            Button button = (Button)findViewById(R.id.button);
+            ImageButton button = (ImageButton)findViewById(R.id.button);
             button.setVisibility(View.GONE);
         }
 
@@ -173,12 +174,12 @@ public class SeeResultsActivity extends AppCompatActivity {
         }
 
         if(quest_num == posledna){
-            Button button_next = (Button)findViewById(R.id.button);
+            ImageButton button_next = (ImageButton)findViewById(R.id.button);
             button_next.setVisibility(View.GONE);
 
         }
         else{
-            Button button_next = (Button)findViewById(R.id.button2);
+            ImageButton button_next = (ImageButton)findViewById(R.id.button2);
             button_next.setVisibility(View.VISIBLE);
         }
 
@@ -295,11 +296,11 @@ public class SeeResultsActivity extends AppCompatActivity {
         }
 
         if(quest_num == prva){
-            Button button_next = (Button)findViewById(R.id.button2);
+            ImageButton button_next = (ImageButton)findViewById(R.id.button2);
             button_next.setVisibility(View.GONE);
         }
         else{
-            Button button_next = (Button)findViewById(R.id.button);
+            ImageButton button_next = (ImageButton)findViewById(R.id.button);
             button_next.setVisibility(View.VISIBLE);
         }
         TextView question = (TextView)findViewById(R.id.question_text);
