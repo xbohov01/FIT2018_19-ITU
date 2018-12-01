@@ -7,4 +7,5 @@
     <color name="text_white">#ffffff</color>
     <color name="colorGreen">#92d7ba</color>
     <color name="text_dark">#000000</color>
+    <color name="backgroud">#e7dde8</color>
 </resources>
