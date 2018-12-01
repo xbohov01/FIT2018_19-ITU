@@ -23,6 +23,7 @@
         <activity android:name=".EndlessTestStart" />
         <activity android:name=".Settings" />
         <activity android:name=".EndlessTest"></activity>
+        <activity android:name=".SeeResultsActivity"></activity>
         <activity android:name=".AchievementsActivity"></activity>
     </application>
 

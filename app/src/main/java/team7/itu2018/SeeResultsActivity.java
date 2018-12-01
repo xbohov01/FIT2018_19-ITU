@@ -13,52 +13,52 @@ import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class RandomTestActivity extends AppCompatActivity {
+public class SeeResultsActivity extends AppCompatActivity {
 
-    int questionOrder = 1;
-    int seconds = 60;
-    int minutes = 19;
-    Timer timer;
     int quest_num = 0;
     Test_database test = new Test_database();
     int[] answers = new int[27];
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (requestCode == 10) {
-            if (resultCode == RESULT_OK) {
-                this.finish();
-
-            }
-        }
-    }
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_test);
+        setContentView(R.layout.activity_see_results);
+
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            answers = extras.getIntArray("answers");
+        }
+        Test_database test = new Test_database();
 
         //back and next
-        Button button1 = (Button)findViewById(R.id.button);
-        button1.setVisibility(View.GONE);
 
         Button button2 = (Button)findViewById(R.id.button2);
         button2.setVisibility(View.GONE);
 
-        Arrays.fill(answers,0);
         //question
+        boolean tmp = true;
+        while(tmp){
+            if(test.GetRightAnswer(quest_num) != answers[quest_num]){
+                tmp = false;
+            }
+            else{
+                quest_num++;
+            }
+        }
+
         TextView question = (TextView)findViewById(R.id.question_text);
         question.setText(test.GetQuestion(quest_num));
-        question.setVisibility(View.GONE);
+        question.setVisibility(View.VISIBLE);
 
         //radio button
         RadioButton buttona = (RadioButton)findViewById(R.id.buttona);
         RadioButton buttonb = (RadioButton)findViewById(R.id.buttonb);
         RadioButton buttonc = (RadioButton)findViewById(R.id.buttonc);
 
-        buttona.setVisibility(View.GONE);
-        buttonb.setVisibility(View.GONE);
-        buttonc.setVisibility(View.GONE);
+        buttona.setText(test.GetAnswerA(quest_num));
+        buttonb.setText(test.GetAnswerB(quest_num));
+        buttonc.setText(test.GetAnswerC(quest_num));
 
         Button button4 = (Button)findViewById(R.id.but_koniec);
         button4.setVisibility(View.GONE);
