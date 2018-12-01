@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroud"
     tools:context=".RandomTestActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/randomTestToolbar"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,18 +89,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@android:color/transparent"
         android:onClick="nextQuestion"
         android:src="@drawable/dalej250"
         android:text="ďalej"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/randomTestToolbar"
-        app:layout_constraintVertical_bias="0.981" />
+        app:layout_constraintStart_toEndOf="@+id/button2" />
 
     <ImageButton
         android:id="@+id/button2"
@@ -116,8 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/randomTestToolbar"
-        app:layout_constraintVertical_bias="0.981" />
+        app:layout_constraintTop_toBottomOf="@+id/but_group" />
 
     <ImageButton
         android:id="@+id/button3"
@@ -144,6 +140,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textColor="@color/text_toolbar_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/randomTestToolbar" />
@@ -168,21 +165,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:background="@drawable/rounded_corners"
+            android:buttonTint="@color/text_toolbar_dark"
+            android:text="RadioButton"
+            android:textColor="@color/text_toolbar_dark" />
 
         <RadioButton
             android:id="@+id/buttonb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:background="@drawable/rounded_corners"
+            android:buttonTint="@color/text_toolbar_dark"
+            android:text="RadioButton"
+            android:textColor="@color/text_toolbar_dark" />
 
         <RadioButton
             android:id="@+id/buttonc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:background="@drawable/rounded_corners"
+            android:buttonTint="@color/text_toolbar_dark"
+            android:text="RadioButton"
+            android:textColor="@color/text_toolbar_dark" />
     </RadioGroup>
 
     <ImageView
@@ -211,6 +219,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.722"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/but_group"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
