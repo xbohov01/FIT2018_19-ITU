@@ -24,6 +24,16 @@ public class RandomTestActivity extends AppCompatActivity {
     int[] answers = new int[27];
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 10) {
+            if (resultCode == RESULT_OK) {
+                this.finish();
+
+            }
+        }
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_test);
@@ -268,7 +278,7 @@ public class RandomTestActivity extends AppCompatActivity {
         //stopTimer();
         Intent intent = new Intent(this, TestResultsActivity.class);
         intent.putExtra("answers",answers);
-        startActivity(intent);
+        startActivityForResult(intent, 10);
     }
 
     @Override
