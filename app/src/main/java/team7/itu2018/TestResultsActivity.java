@@ -1,6 +1,7 @@
 package team7.itu2018;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -68,6 +69,7 @@ public class TestResultsActivity extends AppCompatActivity {
             TextView hlaska = (TextView)findViewById(R.id.textView5);
             text = "Testom si neprešiel! Skús znovu!";
             hlaska.setText(text);
+            hlaska.setTextColor(Color.RED);
         }
 
         if (nespravne_odpovede == 0){
