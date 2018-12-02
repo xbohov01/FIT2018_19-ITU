@@ -77,7 +77,7 @@ public class TestResultsActivity extends AppCompatActivity {
 
     }
 
-    public void ShowAnswers(View view){
+    public void showAnswers(View view){
         Intent intent = new Intent(this, SeeResultsActivity.class);
         intent.putExtra("answers",answers);
         startActivity(intent);
