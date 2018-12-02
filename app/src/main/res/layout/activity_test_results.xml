@@ -67,8 +67,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="326dp"
-        android:layout_height="263dp"
+        android:layout_width="354dp"
+        android:layout_height="245dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/randomTestToolbar"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <TextView
         android:id="@+id/textView2"
@@ -159,7 +159,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -167,25 +167,28 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/transparent"
         android:onClick="endTest"
+        android:src="@drawable/ukoncit750"
         android:text="Koniec "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="348dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/transparent"
         android:onClick="showAnswers"
+        android:src="@drawable/zobraz750"
         android:text="Zobraziť nesprávne odpovede"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/randomTestToolbar"
         tools:ignore="MissingConstraints" />
