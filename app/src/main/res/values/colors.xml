@@ -8,7 +8,20 @@
     <color name="colorGreen">#92d7ba</color>
     <color name="text_dark">#000000</color>
     <color name="backgroud">#e7dde8</color>
-    <color name="vyber_main">#626dbf</color>
-    <color name="vyber_edge">#8790ce</color>
-    <color name="vyber_back">#e0e2f2</color>
+
+    <color name="blueMain">#626dbf</color>
+    <color name="blueEdge">#8790ce</color>
+    <color name="blueBack">#e0e2f2</color>
+
+    <color name="greenMain">#5bb556</color>
+    <color name="greenEdge">#7cc478</color>
+    <color name="greenBack">#def0dd</color>
+
+    <color name="turqMain">#58c299</color>
+    <color name="turqEdge">#91d7bb</color>
+    <color name="turqBack">#def3eb</color>
+
+    <color name="pinkMain">#ba659f</color>
+    <color name="pinkEdge">#e3c1d9</color>
+    <color name="pinkBack">#f1e0ec</color>
 </resources>
