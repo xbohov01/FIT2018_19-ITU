@@ -8,4 +8,7 @@
     <color name="colorGreen">#92d7ba</color>
     <color name="text_dark">#000000</color>
     <color name="backgroud">#e7dde8</color>
+    <color name="vyber_main">#626dbf</color>
+    <color name="vyber_edge">#8790ce</color>
+    <color name="vyber_back">#e0e2f2</color>
 </resources>
