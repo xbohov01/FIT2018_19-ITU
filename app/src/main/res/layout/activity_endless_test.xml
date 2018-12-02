@@ -94,7 +94,7 @@
         android:layout_marginBottom="8dp"
         android:backgroundTint="@android:color/transparent"
         android:onClick="MakeResult"
-        android:src="@drawable/dalej250"
+        android:src="@drawable/potvrdit"
         android:text="ďalej"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
