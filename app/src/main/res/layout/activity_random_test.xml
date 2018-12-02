@@ -10,8 +10,8 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/randomTestToolbar"
         android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="82dp"
+        android:background="@drawable/timer"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,13 +23,14 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:minHeight="100dp"
             tools:layout_editor_absoluteX="16dp">
 
             <TextView
                 android:id="@+id/name_vys"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="Otázka 1/27"
@@ -39,26 +40,25 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintHorizontal_bias="0.46"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.65999997" />
+                app:layout_constraintVertical_bias="0.38" />
 
             <TextView
                 android:id="@+id/timer"
-                android:layout_width="0dp"
+                android:layout_width="100dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="20:00"
                 android:textAlignment="center"
                 android:textColor="@color/text_toolbar_dark"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/name_vys"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
