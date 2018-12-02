@@ -59,6 +59,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/randomTestToolbar"
-        app:srcCompat="@drawable/uspechy3" />
+        app:srcCompat="@drawable/grafy1" />
 
 </android.support.constraint.ConstraintLayout>
