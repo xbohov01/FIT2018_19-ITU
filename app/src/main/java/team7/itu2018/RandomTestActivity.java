@@ -219,18 +219,23 @@ public class RandomTestActivity extends AppCompatActivity {
     public void startTimer(View view){
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                //Update timer
-                seconds--;
-                if (seconds == 0){
-                    seconds = 59;
-                    minutes--;
+                @Override
+                public void run(){
+                    runOnUiThread(new TimerTask() {
+                        @Override
+                        public void run() {
+                            //Update timer
+                            seconds--;
+                            if (seconds == 0){
+                                seconds = 59;
+                                minutes--;
+                            }
+                            String text = String.format("%02d:%02d",minutes,seconds);
+                            TextView textView = (TextView) findViewById(R.id.timer);
+                            textView.setText(text);
+                        }
+                    });
                 }
-                String text = String.format("%02d:%02d",minutes,seconds);
-                TextView textView = (TextView) findViewById(R.id.timer);
-                textView.setText(text);
-            }
         }, 0, 1000);
 
         ImageView image_test = (ImageView)findViewById(R.id.image_test);
